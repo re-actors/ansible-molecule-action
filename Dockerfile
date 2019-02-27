@@ -12,5 +12,7 @@ LABEL "maintainer"="Sviatoslav Sydorenko <wk+re-actors@sydorenko.org.ua>"
 ENV ANSIBLE_LOCAL_TEMP "/tmp/ansible/local"
 ENV ANSIBLE_ASYNC_DIR = "/tmp/ansible/async"
 
+RUN pip install docker
+
 ENTRYPOINT ["molecule"]
 CMD ["test"]
