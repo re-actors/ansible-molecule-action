@@ -9,5 +9,7 @@ LABEL "repository"="https://github.com/re-actors/ansible-molecule-action"
 LABEL "homepage"="https://github.com/re-actors"
 LABEL "maintainer"="Sviatoslav Sydorenko <wk+re-actors@sydorenko.org.ua>"
 
+ENV ANSIBLE_LOCAL_TEMP "/tmp/ansible"
+
 ENTRYPOINT ["molecule"]
 CMD ["test"]
