@@ -13,8 +13,7 @@ ENV ANSIBLE_LOCAL_TEMP "/tmp/ansible/local"
 ENV ANSIBLE_ASYNC_DIR = "/tmp/ansible/async"
 
 USER root
-RUN pip install docker && sudo chown :molecule /var/run/docker.sock
-USER ${TEST_USER}
+RUN pip install docker
 
 ENTRYPOINT ["molecule"]
 CMD ["test"]
